@@ -23,8 +23,6 @@ dependencies {
     implementation("com.h2database:h2:2.1.214")
     // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
     implementation("com.zaxxer:HikariCP:5.1.0")
-
-
 }
 
 flyway {
