@@ -17,13 +17,13 @@ id BIGINT PRIMARY KEY AUTO_INCREMENT,
 client_id BIGINT NOT NULL,
 start_date DATE,
 finish_date DATE,
-FOREIGN KEY(client_id) REFERENCES client(id)
+FOREIGN KEY(client_id) REFERENCES client(id) ON DELETE CASCADE
 );
 
 CREATE TABLE project_worker(
 worker_id BIGINT,
 project_id BIGINT,
 PRIMARY KEY(project_id, worker_id),
-FOREIGN KEY(project_id) REFERENCES project(id),
-FOREIGN KEY(worker_id) REFERENCES worker(id)
+FOREIGN KEY(project_id) REFERENCES project(id) ON DELETE CASCADE,
+FOREIGN KEY(worker_id) REFERENCES worker(id) ON DELETE CASCADE
 );
